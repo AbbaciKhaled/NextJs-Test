@@ -19,6 +19,9 @@ function Home() {
       <Link href='/blog'>
         <a>Blog</a>
       </Link>
+      <Link href='/posts'>
+        <a>Posts</a>
+      </Link>
       <button onClick={handleClick}>
         Click me !
       </button>
