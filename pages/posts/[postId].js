@@ -47,6 +47,7 @@ export async function getStaticPaths() {
             * fallback :
                 ** false: return 404 error / when you have a few number of pages and new pages are not added often
                 ** true: return fullback version / page dynamicly generated
+                ** 'blocking': the first response has content / take more time to load / for layout shift & for crawlers that not support JS
         */
     }
 }
