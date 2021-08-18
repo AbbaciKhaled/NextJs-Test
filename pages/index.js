@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import styles from '../styles/Home.module.css'
 
 function Home() {
   const router = useRouter()
@@ -10,7 +11,7 @@ function Home() {
   return (
     <>
       <Link href='/'>
-        <a>Home</a>
+        <a className={styles.red}>Home</a>
       </Link>
       <Link href='/about'>
         <a>About</a>
