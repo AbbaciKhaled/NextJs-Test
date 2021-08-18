@@ -25,6 +25,10 @@ function Home() {
       <button onClick={handleClick}>
         Click me !
       </button>
+      <div class="alert alert-primary" role="alert">
+        <strong>Well done!</strong> You successfully read this
+        important alert message.
+      </div>
     </>
   )
 }
