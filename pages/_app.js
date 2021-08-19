@@ -1,6 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.css'
+import '../styles/layout.css'
+
 import { ThemeProvider } from 'styled-components'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const theme = {
   colors: {
@@ -9,9 +13,20 @@ const theme = {
 }
 
 function MyApp({ Component, pageProps }) {
-  return <ThemeProvider theme={theme}>
-    <Component {...pageProps} />
-  </ThemeProvider>
+
+  if (Component.getLayout)
+    return Component.getLayout(<Component {...pageProps} />)
+
+  return (
+    <>
+      <Header></Header>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+      <Footer></Footer>
+    </>
+  )
+
 
 }
 

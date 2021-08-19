@@ -1,3 +1,5 @@
+import { Component } from 'react'
+import Footer from '../../components/Footer'
 import styles from '../../styles/Product.module.scss'
 
 function Product() {
@@ -11,3 +13,12 @@ function Product() {
 }
 
 export default Product
+
+Product.getLayout = function PageLayout(page) {
+    return (
+        <>
+            {page}
+            <Footer></Footer>
+        </>
+    )
+}
